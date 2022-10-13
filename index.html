@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+ 
+</head>
+<body>
+    <div class = question>
+        <button onclick="test()">문제 2</button>
+        <p id="test_obj"></p>
+         
+        <script>
+            var i = 0;
+            var txt = 'document.write("a")의 뜻은? 1. 문서 중 a를 찾아라 2. 문서 이름을 a로 해라 3. 문서에 a를 적어라 4. a라는 문서에 적어라 5. 잘못된 코드라 실행이 안된다.'
+            var speed = 100;
+         
+            function test() {
+                if (i < txt.length) {
+                    document.getElementById("test_obj").innerHTML += txt.charAt(i); //    https://ihanpark.github.io/p4/
+                    i++;
+                    setTimeout(test, speed);
+                }
+            }
+        </script>
+    </div>
+</body>
